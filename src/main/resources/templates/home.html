@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
-      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Spring Security Example</title>
+    <meta charset="ISO-8859-1">
+    <title>Welcome to LGH Home</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1>Welcome!</h1>
-<p>Click <a th:href="@{/hello}">here</a> to see a greeting.</p>
+<div class="container text-center">
+    <h1>Welcome to LGH site</h1>
+    <h3><a th:href="@{/users}">List of Users</a></h3>
+    <h3><a th:href="@{/sign}">Register</a></h3>
+    <h3><a th:href="@{/login}">Login</a></h3>
+</div>
 </body>
 </html>
