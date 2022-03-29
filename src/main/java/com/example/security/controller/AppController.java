@@ -20,6 +20,11 @@ public class AppController {
         return "home";
     }
 
+    @GetMapping("/login")
+    public String login() {
+        return "login";
+    }
+    
     @GetMapping("/sign")
     public String sign(Model model) {
         model.addAttribute("member", new Member());
@@ -43,6 +48,12 @@ public class AppController {
         memberRepository.save(member);
 
         return "redirect:/";
+    }
+
+    @PostMapping("/login_fail")
+    public String loginFail() {
+
+        return "/login";
     }
 
 }
