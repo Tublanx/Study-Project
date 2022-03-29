@@ -27,6 +27,13 @@ public class AppController {
         return "sign";
     }
 
+    @GetMapping("/users")
+    public String users(Model model) {
+        model.addAttribute("listUsers", memberRepository.findAll());
+
+        return "users";
+    }
+
     @PostMapping("/signProc")
     public String signProcess(Member member) {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
