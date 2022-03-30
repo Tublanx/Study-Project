@@ -17,10 +17,11 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String id) throws UsernameNotFoundException {
         Member member = memberRepository.findById(id);
 
-        if(member == null) {
+        if (member == null) {
             throw new UsernameNotFoundException("User not Found");
         }
 
         return new CustomUserDetails(member);
     }
+
 }
