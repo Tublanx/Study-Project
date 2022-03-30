@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class AppController {
@@ -40,7 +41,14 @@ public class AppController {
     }
 
     @PostMapping("/signProc")
-    public String signProcess(Member member) {
+    public String signProcess(Member member, RedirectAttributes attributes) {
+        Member findMember = memberRepository.findById(member.getId());
+
+        if (findMember != null) {
+            attributes.addFlashAttribute("error", "아이디가 중복되었습니다.");
+            return "redirect:/sign";
+        }
+
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
         String pwd = passwordEncoder.encode(member.getPassword());
