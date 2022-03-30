@@ -59,7 +59,13 @@ public class AppController {
     }
 
     @PostMapping("/login_fail")
-    public String loginFail() {
+    public String loginFail(Member member, RedirectAttributes attributes) {
+        Member findMember = memberRepository.findById(member.getId());
+
+        if (findMember == null) {
+            attributes.addFlashAttribute("error", "회원이 존재하지 않습니다.");
+            return "redirect:/login";
+        }
 
         return "/login";
     }
