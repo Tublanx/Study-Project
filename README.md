@@ -12,7 +12,10 @@ Spring boot Security Website using bootstrap, thymeleaf, spring security
 ![image](https://user-images.githubusercontent.com/82877211/160614715-b26fe4e0-e688-4423-92bd-6014f17ef2b0.png)
 
 ## - Sign Page
-![image](https://user-images.githubusercontent.com/82877211/160606449-3b531ea8-b0b0-4324-b849-6dcb71d27bf6.png)
+![image](https://user-images.githubusercontent.com/82877211/160839933-c5bcf3ae-63a3-4bc6-895d-9f1bc8472ef1.png)
+
+## - Sign Page (If the ID overlaps)
+![image](https://user-images.githubusercontent.com/82877211/160840042-f3a8c752-fb9b-468a-8d7e-0f480bc16b9f.png)
 
 ## - User List Page
 ### Logout is controlled by Spring security
