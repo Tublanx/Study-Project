@@ -3,10 +3,10 @@
 Spring boot Security Website using bootstrap, thymeleaf, spring security
 
 ## - Home Page (Before Login)
-<img src="https://user-images.githubusercontent.com/82877211/160606056-538665ea-44cf-4e7b-89b6-71501fcf5f8d.png" />
+![image](https://user-images.githubusercontent.com/82877211/162127492-372e417e-e8fa-4961-99a5-ca9789ce1ea8.png)
 
 ## - Home Page (After Login)
-![image](https://user-images.githubusercontent.com/82877211/160614906-e56c2592-b5a3-4e55-9fd0-8561d3675165.png)
+![image](https://user-images.githubusercontent.com/82877211/162127594-99ff1c2e-ae08-4158-9f5a-b85b3693a194.png)
 
 ## - Login Page
 ![image](https://user-images.githubusercontent.com/82877211/160614715-b26fe4e0-e688-4423-92bd-6014f17ef2b0.png)
