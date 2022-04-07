@@ -52,6 +52,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .formLogin().loginPage("/login").loginProcessingUrl("/loginProc").failureForwardUrl("/login_fail").usernameParameter("id").defaultSuccessUrl("/").permitAll()
                 .and()
-                .logout().logoutSuccessUrl("/").permitAll();
+               .logout().logoutSuccessUrl("/").invalidateHttpSession(true).permitAll();
     }
 }
